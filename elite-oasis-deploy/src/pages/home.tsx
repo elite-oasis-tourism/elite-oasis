@@ -58,7 +58,7 @@ export default function Home() {
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-12"
           >
             {lang === "en" 
-              ? "Bespoke international holidays, seamless flight bookings, and global visa services from UAE's premier travel consultancy."
+              ? "Tailoring bespoke international holidays with seamless flight bookings and global visa services — guided by the UAE’s trusted travel experts."
               : "عطلات دولية مخصصة، حجوزات طيران سلسة، وخدمات تأشيرات عالمية من أبرز وكالات السفر في الإمارات."}
           </motion.p>
           
