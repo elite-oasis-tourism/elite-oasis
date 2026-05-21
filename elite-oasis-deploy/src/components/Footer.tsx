@@ -59,7 +59,7 @@ export default function Footer() {
             <a href="https://t.me/eliteoasistourism" target="_blank" rel="noreferrer" className="text-[#229ED9] hover:opacity-80 transition-opacity bg-white p-2 rounded-full">
               <SiTelegram className="h-5 w-5" />
             </a>
-            <a href="https://facebook.com/EliteOasisTourism/" target="_blank" rel="noreferrer" className="text-[#1877F2] hover:opacity-80 transition-opacity bg-white p-2 rounded-full">
+            <a href="https://www.facebook.com/profile.php?id=61583695385653" target="_blank" rel="noreferrer" className="text-[#1877F2] hover:opacity-80 transition-opacity bg-white p-2 rounded-full">
               <SiFacebook className="h-5 w-5" />
             </a>
           </div>
