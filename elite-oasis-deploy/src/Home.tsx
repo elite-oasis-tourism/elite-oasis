@@ -243,29 +243,7 @@ Thanks you again for making this an amazing experience."</p>
               </div>
               <p className="text-muted-foreground italic mb-6">"I recently purchased tickets from this tourism company and had a great experience. Misbah was extremely helpful, gave me the best price available, and patiently answered all my queries and doubts. The entire process was smooth and seamless from start to finish. Highly recommend getting all your travel tickets from here!."</p>
               <div className="font-bold">- Amita Quadros.</div>
-                 </div>
-             <div className="bg-card p-8 rounded-xl border border-border">
-              <div className="flex text-primary mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
-              <p className="text-muted-foreground italic mb-6">"We have booked our umrah package with them. It was one of the best packages with full tour plan from Madina to Mecca. Staff is very helpful and professional. Alhamdullilah we were very satisfied. Its a must try place."</p>
-              <div className="font-bold">- Arhum Baig.</div>
-               </div>
-             <div className="bg-card p-8 rounded-xl border border-border">
-              <div className="flex text-primary mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-              </div>
-              <p className="text-muted-foreground italic mb-6">"We booked our Umrah package with Elite Oasis Tourism and had an excellent experience. The itinerary and hotel arrangements were amazing, and the entire trip was comfortable and well organized. I highly recommend them for personalized travel packages.
-We also book our flights through them and receive the best deals."</p>
-              <div className="font-bold">- Samreena Ashraf.</div>
-            </div>
-             <div className="bg-card p-8 rounded-xl border border-border">
-              <div className="flex text-primary mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-              </div>
-              <p className="text-muted-foreground italic mb-6">"Elite Oasis Tourism is one of the best travel agencies I have seen. All the personnel are very cooperative, efficient, and easy to deal with. It was a delight consulting them regarding ticketing as well as hotel reservations for the destination. I got a cost-effective travel package. Overall, a great experience.."</p>
-              <div className="font-bold">- Sohail.</div>
-            </div>
             </div>
           </div>
         </div>
