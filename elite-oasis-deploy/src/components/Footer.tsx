@@ -40,7 +40,8 @@ export default function Footer() {
             </li>
             <li>
               <a href="tel:+971564158896" className="hover:text-primary transition-colors">
-                +971 564 158 896 | +971 67451770 (Land lIne)
+                +971 564 158 896 
+                +971 67451770 (Land lIne)
                 Alternate Number : +971 509512527
               </a>
             </li>
