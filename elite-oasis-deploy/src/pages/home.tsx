@@ -222,12 +222,13 @@ export default function Home() {
               <p className="text-muted-foreground italic mb-6">"Thank you Misbah Rizvi and Elite Oasis for a truly memorable trip to Sri Lanka. The itinerary was very well planned as per our liking and hotels were a joy.
 Thanks you again for making this an amazing experience."</p>
               <div className="font-bold">- Tehzeeb azeemi.</div>
-              </div>
-              <p className="text-muted-foreground italic mb-6">"My family and I recently used their services for our Umrah trip.
-They organised everything amazingly, from visa to stays to transport as well. We were travelling with our grandmother, so they arranged for great hotels very close to the mosques. (Photos attached of the hotels)
-They were always available to answer our queries. They planned the itirenary based on our needs, and took care of all our requirements. Highly recommend them."</p>
-              <div className="font-bold">-Ayisha Abdul.</div>
             </div>
+            <div className="bg-card p-8 rounded-xl border border-border">
+              <div className="flex text-primary mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
+              </div>
+              <p className="text-muted-foreground italic mb-6">"My family and I recently used their services for our Umrah trip.\nThey organised everything amazingly, from visa to stays to transport as well. We were travelling with our grandmother, so they arranged for great hotels very close to the mosques. (Photos attached of the hotels)\nThey were always available to answer our queries. They planned the itirenary based on our needs, and took care of all our requirements. Highly recommend them."</p>
+              <div className="font-bold">- Ayisha Abdul.</div>
             </div>
           </div>
         </div>
