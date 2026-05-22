@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Plane, Globe, Shield, Calendar, Star } from "lucide-react";
+import { ArrowRight, ArrowLeft, Plane, Globe, Shield, Calendar, Star } from "lucide-react";
 import HomeSearch from "@/components/HomeSearch";
 import PackageCard from "@/components/PackageCard";
 import VisaCard from "@/components/VisaCard";
@@ -12,8 +12,36 @@ import maldivesImg from "@/assets/maldives.png";
 import europeImg from "@/assets/europe.png";
 import dubaiImg from "@/assets/dubai.png";
 
+const testimonials = [
+  {
+    name: "Rashida Polan.",
+    text: "\"We had a wonderful experience with Mr. Misbah from Elite Oasis. Our holiday was very well planned with a detailed itinerary for each day. Our stay in all the planned hotels was a great experience too. I would definitely recommend them.\""
+  },
+  {
+    name: "Mariam bin tarish",
+    text: "\"Incredible service. The trips are planned with so much detail! From the locations to the experiences, everything feels unique and effortless. You can tell there's real passion behind the work. Highly recommended for anyone who wants a smooth, unforgettable travel experience.\""
+  },
+  {
+    name: "Tehzeeb azeemi.",
+    text: "\"Thank you Misbah Rizvi and Elite Oasis for a truly memorable trip to Sri Lanka. The itinerary was very well planned as per our liking and hotels were a joy. Thanks again for making this an amazing experience.\""
+  },
+  {
+    name: "Ayisha Abdul.",
+    text: "\"My family and I recently used their services for our Umrah trip. They organised everything amazingly, from visa to stays to transport as well. We were travelling with our grandmother, so they arranged for great hotels very close to the mosques. They were always available to answer our queries. They planned the itinerary based on our needs, and took care of all our requirements. Highly recommend them.\""
+  },
+  {
+    name: "Arhum Baig.",
+    text: "\"We have booked our umrah package with them. It was one of the best packages with full tour plan from Madina to Mecca. Staff is very helpful and professional. Alhamdullilah we were very satisfied. Its a must try place.\""
+  },
+  {
+    name: "Amita Quadros.",
+    text: "\"I recently purchased tickets from this tourism company and had a great experience. Misbah was extremely helpful, gave me the best price available, and patiently answered all my queries and doubts. The entire process was smooth and seamless from start to finish. Highly recommend getting all your travel tickets from here!\""
+  },
+];
+
 export default function Home() {
   const [lang, setLang] = useState<"en" | "ar">("en");
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const observer = new MutationObserver(() => {
@@ -26,6 +54,9 @@ export default function Home() {
     document.title = "Elite Oasis Tourism | Luxury Travel Agency UAE";
     return () => observer.disconnect();
   }, []);
+
+  const prevSlide = () => setActiveIndex(i => (i === 0 ? testimonials.length - 1 : i - 1));
+  const nextSlide = () => setActiveIndex(i => (i === testimonials.length - 1 ? 0 : i + 1));
 
   return (
     <div>
@@ -190,7 +221,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      
+
       {/* 6. Testimonials */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -199,49 +230,53 @@ export default function Home() {
             <div className="w-24 h-1 bg-primary mx-auto mb-6" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-card p-8 rounded-xl border border-border">
-              <div className="flex text-primary mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
+          <div className="relative px-10">
+            {/* Slider Track */}
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+              >
+                {testimonials.map((t, i) => (
+                  <div key={i} className="min-w-full">
+                    <div className="bg-card p-8 rounded-xl border border-border max-w-2xl mx-auto">
+                      <div className="flex text-primary mb-4">
+                        {[...Array(5)].map((_, j) => <Star key={j} className="h-5 w-5 fill-current" />)}
+                      </div>
+                      <p className="text-muted-foreground italic mb-6">{t.text}</p>
+                      <div className="font-bold">- {t.name}</div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <p className="text-muted-foreground italic mb-6">"We had a wonderful experience with Mr. Misbah from Elite Oasis. Our holiday was very well planned with a detailed itinerary for each day. Our stay in all the planned hotels was a great experience too. I would definitely recommend them."</p>
-              <div className="font-bold">- Rashida Polan.</div>
             </div>
-            <div className="bg-card p-8 rounded-xl border border-border">
-              <div className="flex text-primary mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-              </div>
-              <p className="text-muted-foreground italic mb-6">"Incredible service. The trips are planned with so much detail! From the locations to the experiences, everything feels unique and effortless. You can tell there's real passion behind the work. Highly recommended for anyone who wants a smooth, unforgettable travel experience."</p>
-              <div className="font-bold">- Mariam bin tarish</div>
-            </div>
-            <div className="bg-card p-8 rounded-xl border border-border">
-              <div className="flex text-primary mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-              </div>
-              <p className="text-muted-foreground italic mb-6">"Thank you Misbah Rizvi and Elite Oasis for a truly memorable trip to Sri Lanka. The itinerary was very well planned as per our liking and hotels were a joy. Thanks again for making this an amazing experience."</p>
-              <div className="font-bold">- Tehzeeb azeemi.</div>
-            </div>
-            <div className="bg-card p-8 rounded-xl border border-border">
-              <div className="flex text-primary mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-              </div>
-              <p className="text-muted-foreground italic mb-6">"My family and I recently used their services for our Umrah trip. They organised everything amazingly, from visa to stays to transport as well. We were travelling with our grandmother, so they arranged for great hotels very close to the mosques. They were always available to answer our queries. They planned the itinerary based on our needs, and took care of all our requirements. Highly recommend them."</p>
-              <div className="font-bold">- Ayisha Abdul.</div>
-            </div>
-            <div className="bg-card p-8 rounded-xl border border-border">
-              <div className="flex text-primary mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-              </div>
-              <p className="text-muted-foreground italic mb-6">"We have booked our umrah package with them. It was one of the best packages with full tour plan from Madina to Mecca. Staff is very helpful and professional. Alhamdullilah we were very satisfied. Its a must try place."</p>
-              <div className="font-bold">- Arhum Baig.</div>
-            </div>
-            <div className="bg-card p-8 rounded-xl border border-border">
-              <div className="flex text-primary mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
-              </div>
-              <p className="text-muted-foreground italic mb-6">"I recently purchased tickets from this tourism company and had a great experience. Misbah was extremely helpful, gave me the best price available, and patiently answered all my queries and doubts. The entire process was smooth and seamless from start to finish. Highly recommend getting all your travel tickets from here!"</p>
-              <div className="font-bold">- Amita Quadros.</div>
-            </div>
+
+            {/* Prev Button */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-card border border-border rounded-full p-2 shadow hover:bg-primary hover:text-white transition"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+
+            {/* Next Button */}
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-card border border-border rounded-full p-2 shadow hover:bg-primary hover:text-white transition"
+            >
+              <ArrowRight className="h-5 w-5" />
+            </button>
+          </div>
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                className={`w-3 h-3 rounded-full transition ${i === activeIndex ? "bg-primary" : "bg-muted"}`}
+              />
+            ))}
           </div>
         </div>
       </section>
