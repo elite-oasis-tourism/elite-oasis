@@ -205,22 +205,29 @@ export default function Home() {
               <div className="flex text-primary mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
-              <p className="text-muted-foreground italic mb-6">"Elite Oasis arranged our Maldives honeymoon flawlessly. Every detail from the flights to the overwater villa was spectacular."</p>
-              <div className="font-bold">- Sarah A.</div>
+              <p className="text-muted-foreground italic mb-6">"We had a wonderful experience with Mr. Misbah from Elite Oasis. Our holiday was very well planned with a detailed itinerary for each day. Our stay in all the planned hotels was a great experience too. I would definitely recommend them."</p>
+              <div className="font-bold">- Rashida Polan.</div>
             </div>
             <div className="bg-card p-8 rounded-xl border border-border">
               <div className="flex text-primary mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
-              <p className="text-muted-foreground italic mb-6">"Their Schengen visa service was incredibly efficient. The team guided me through every document required."</p>
-              <div className="font-bold">- Mohammed K.</div>
+              <p className="text-muted-foreground italic mb-6">"Incredible service. The trips are planned with so much detail! From the locations to the experiences, everything feels unique and effortless. You can tell there’s real passion behind the work. Highly recommended for anyone who wants a smooth, unforgettable travel experience."</p>
+              <div className="font-bold">- Mariam bin tarish</div>
             </div>
             <div className="bg-card p-8 rounded-xl border border-border">
               <div className="flex text-primary mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
-              <p className="text-muted-foreground italic mb-6">"I always book my business class flights through Elite. Their rates are competitive and the service is highly personalized."</p>
-              <div className="font-bold">- Ahmed R.</div>
+              <p className="text-muted-foreground italic mb-6">"Thank you Misbah Rizvi and Elite Oasis for a truly memorable trip to Sri Lanka. The itinerary was very well planned as per our liking and hotels were a joy.
+Thanks you again for making this an amazing experience."</p>
+              <div className="font-bold">- Tehzeeb azeemi.</div>
+              </div>
+              <p className="text-muted-foreground italic mb-6">"My family and I recently used their services for our Umrah trip.
+They organised everything amazingly, from visa to stays to transport as well. We were travelling with our grandmother, so they arranged for great hotels very close to the mosques. (Photos attached of the hotels)
+They were always available to answer our queries. They planned the itirenary based on our needs, and took care of all our requirements. Highly recommend them."</p>
+              <div className="font-bold">-Ayisha Abdul.</div>
+            </div>
             </div>
           </div>
         </div>
