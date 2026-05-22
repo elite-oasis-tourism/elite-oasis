@@ -15,7 +15,6 @@ import dubaiImg from "@/assets/dubai.png";
 export default function Home() {
   const [lang, setLang] = useState<"en" | "ar">("en");
 
-  // Track the HTML lang attribute set by Header.tsx to sync local state
   useEffect(() => {
     const observer = new MutationObserver(() => {
       if (document.documentElement.lang === "ar" || document.documentElement.lang === "en") {
@@ -58,7 +57,7 @@ export default function Home() {
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-12"
           >
             {lang === "en" 
-              ? "Tailoring bespoke international holidays with seamless flight bookings and global visa services — guided by the UAE’s trusted travel experts."
+              ? "Tailoring bespoke international holidays with seamless flight bookings and global visa services — guided by the UAE's trusted travel experts."
               : "عطلات دولية مخصصة، حجوزات طيران سلسة، وخدمات تأشيرات عالمية من أبرز وكالات السفر في الإمارات."}
           </motion.p>
           
@@ -191,6 +190,7 @@ export default function Home() {
           </a>
         </div>
       </section>
+      
       {/* 6. Testimonials */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -211,38 +211,36 @@ export default function Home() {
               <div className="flex text-primary mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
-              <p className="text-muted-foreground italic mb-6">"Incredible service. The trips are planned with so much detail! From the locations to the experiences, everything feels unique and effortless. You can tell there’s real passion behind the work. Highly recommended for anyone who wants a smooth, unforgettable travel experience."</p>
+              <p className="text-muted-foreground italic mb-6">"Incredible service. The trips are planned with so much detail! From the locations to the experiences, everything feels unique and effortless. You can tell there's real passion behind the work. Highly recommended for anyone who wants a smooth, unforgettable travel experience."</p>
               <div className="font-bold">- Mariam bin tarish</div>
             </div>
             <div className="bg-card p-8 rounded-xl border border-border">
               <div className="flex text-primary mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
-              <p className="text-muted-foreground italic mb-6">"Thank you Misbah Rizvi and Elite Oasis for a truly memorable trip to Sri Lanka. The itinerary was very well planned as per our liking and hotels were a joy.
-Thanks you again for making this an amazing experience."</p>
+              <p className="text-muted-foreground italic mb-6">"Thank you Misbah Rizvi and Elite Oasis for a truly memorable trip to Sri Lanka. The itinerary was very well planned as per our liking and hotels were a joy. Thanks again for making this an amazing experience."</p>
               <div className="font-bold">- Tehzeeb azeemi.</div>
             </div>
             <div className="bg-card p-8 rounded-xl border border-border">
               <div className="flex text-primary mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
-              <p className="text-muted-foreground italic mb-6">"My family and I recently used their services for our Umrah trip.\nThey organised everything amazingly, from visa to stays to transport as well. We were travelling with our grandmother, so they arranged for great hotels very close to the mosques. (Photos attached of the hotels)\nThey were always available to answer our queries. They planned the itirenary based on our needs, and took care of all our requirements. Highly recommend them."</p>
+              <p className="text-muted-foreground italic mb-6">"My family and I recently used their services for our Umrah trip. They organised everything amazingly, from visa to stays to transport as well. We were travelling with our grandmother, so they arranged for great hotels very close to the mosques. They were always available to answer our queries. They planned the itinerary based on our needs, and took care of all our requirements. Highly recommend them."</p>
               <div className="font-bold">- Ayisha Abdul.</div>
-             </div>
-             <div className="bg-card p-8 rounded-xl border border-border">
+            </div>
+            <div className="bg-card p-8 rounded-xl border border-border">
               <div className="flex text-primary mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
               <p className="text-muted-foreground italic mb-6">"We have booked our umrah package with them. It was one of the best packages with full tour plan from Madina to Mecca. Staff is very helpful and professional. Alhamdullilah we were very satisfied. Its a must try place."</p>
               <div className="font-bold">- Arhum Baig.</div>
-               </div>
-             <div className="bg-card p-8 rounded-xl border border-border">
+            </div>
+            <div className="bg-card p-8 rounded-xl border border-border">
               <div className="flex text-primary mb-4">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
-              <p className="text-muted-foreground italic mb-6">"I recently purchased tickets from this tourism company and had a great experience. Misbah was extremely helpful, gave me the best price available, and patiently answered all my queries and doubts. The entire process was smooth and seamless from start to finish. Highly recommend getting all your travel tickets from here!."</p>
+              <p className="text-muted-foreground italic mb-6">"I recently purchased tickets from this tourism company and had a great experience. Misbah was extremely helpful, gave me the best price available, and patiently answered all my queries and doubts. The entire process was smooth and seamless from start to finish. Highly recommend getting all your travel tickets from here!"</p>
               <div className="font-bold">- Amita Quadros.</div>
-              </div>
             </div>
           </div>
         </div>
